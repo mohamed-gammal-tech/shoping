@@ -1,0 +1,795 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --color1: #00a7ff;
+  --color2: #215077;
+  --color3: rgb(163, 206, 255) 0%;
+  --color5: rgb(79, 156, 232);
+}
+
+body {
+  overflow-x: hidden;
+}
+main {
+  margin-top: 90px !important;
+  min-width: 100% !important;
+}
+
+section {
+  padding: 40px 10px 40px 10px;
+  margin: 0 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ------------------------------------------- */
+.head-content {
+  display: flex;
+  flex-direction: row;
+}
+.title {
+  color: #215077;
+}
+.inputs {
+  color: #215077;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  justify-content: center;
+  width: 33%; /* Adjust width as needed */
+  margin-left: 35px;
+  object-fit: cover;
+  background-color: rgba(163, 206, 255, 0.3);
+}
+
+.left-side .profile-picture img {
+  width: 180px;
+  border: none;
+  border-radius: 50%;
+}
+
+.left-side .profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+.left-side .profile-info span {
+  padding: 10px;
+}
+.left-side .profile-info span h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #215077;
+}
+.left-side .profile-info span p {
+  color: #215077;
+  font-weight: bold;
+  font-size: 15px;
+}
+.left-side .profile-info .evaluation {
+  display: flex;
+}
+.left-side .profile-info .evaluation h4 {
+  font-weight: bold;
+  margin-right: 15px;
+}
+.left-side .profile-info .evaluation .stars i {
+  color: goldenrod;
+}
+.right-side {
+  width: 100%; /* Adjust width as needed */
+  object-fit: cover;
+  box-sizing: border-box;
+}
+.right-side .cover-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96%;
+  height: 50vh;
+  box-sizing: border-box;
+}
+.cover-picture img {
+  /* box-sizing: border-box;
+  border: none; */
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+/* ----------Head section ------------------ */
+
+/* ----------------filter------------- */
+.body-content {
+  margin-top: 2%;
+  display: flex;
+  margin-bottom: 100px;
+}
+.body-content .filtration {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  margin-left: 50px;
+}
+.body-content .filtration .inputs form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+.body-content .filtration .inputs form label {
+  padding: 10px 0;
+}
+/* ---------------------------------- */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 85%;
+  box-sizing: border-box;
+}
+
+.product {
+  flex: 0 0 auto;
+  /* width: 250px;
+  height: 450px; */
+  width: 265px;
+  height: 385px;
+  border-radius: 10px;
+  border: rgba(33, 80, 119, 0.3) solid 0.1px;
+}
+.product-img {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+.image-thumb {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+}
+
+.add-card-btn {
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 90%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.product:hover .add-card-btn {
+  opacity: 1;
+}
+
+.add-card-btn:hover {
+  background: #00a7ff;
+  color: #fff;
+}
+
+.product-info {
+  width: 100%;
+  height: 100px;
+  padding: 30px 4px 4px 4px;
+  color: #215077;
+}
+
+.product-name {
+  text-transform: uppercase;
+  margin-bottom: 10px; /* Add space between name and price */
+}
+.product-name h3 {
+  font-weight: 300;
+  font-size: 18px !important;
+}
+.product-name span {
+  color: 215077;
+  font-size: 12px;
+}
+
+.price {
+  display: flex; /* Make price section a flexbox */
+  justify-content: space-between; /* Space between price elements */
+  align-items: center;
+}
+.price p {
+  font-size: 22px;
+  font-weight: bold;
+}
+.price span {
+  color: red;
+  font-size: 18px;
+  font-weight: lighter;
+  text-decoration-line: line-through;
+}
+.product:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.product a {
+  text-decoration: none; /* Remove underline */
+  box-sizing: border-box;
+}
+
+/* ---------------- filter price --------------- */
+.filtration hr {
+  width: 60%;
+}
+.range {
+  margin-top: 8%;
+}
+
+.range .title h4 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.range form {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+  margin-left: 10px;
+}
+
+.range form label {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.range form input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.range form span {
+  font-size: 16px;
+  color: #215077;
+}
+.range form label span strong {
+  color: #00a7ff;
+}
+
+/* ---------------- filter price --------------- */
+
+/* Start About Artist Section */
+.about-artist-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-top: 1px solid #e1e1e1;
+}
+
+.about-artist-container {
+  max-width: 1400px; /* Maximum width of the content, you can adjust this */
+  width: 100%;
+  width: 95%;
+  margin: 10px auto;
+  margin-top: 10px;
+  background-color: white;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-wrap: normal;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+}
+.artist-info .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.head .left-head {
+  display: flex;
+  align-items: center;
+}
+.artist-info .head .profile-img {
+  margin-right: 20px;
+}
+.artist-info .head .profile-img img {
+  width: 100px;
+  height: auto;
+}
+.artist-info .head .info h2 {
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: #215077;
+}
+.artist-info .head .info p {
+  color: #215077 !important;
+  font-weight: lighter;
+}
+
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #215077;
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: rgba(163, 206, 255, 0.5);
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px rgba(163, 206, 255, 0.5), -6px -6px 12px #ffffff;
+}
+
+.button2:active {
+  color: #215077;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: var(--color1);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid var(--color1);
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: var(--color1);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: var(--color1);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.artist-info .follow_btn {
+  display: flex;
+  justify-content: space-between;
+}
+.artist-info .follow_btn button {
+  margin-left: 20px;
+}
+
+.artist-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.artist-text-content h2 {
+  font-size: 1.5em; /* Adjust the size as needed */
+  margin-bottom: 10px;
+}
+
+.artist-text-content p {
+  font-size: 1em;
+  color: #215077;
+  line-height: 1.6; /* Line height for paragraph text */
+}
+#caption {
+  max-width: 70%;
+  margin-bottom: 30px;
+}
+
+.artist-stats {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  margin: 30px 0;
+  color: #215077;
+  box-sizing: border-box;
+  overflow-wrap: normal;
+}
+.slach {
+  color: lightgray;
+}
+.achievements {
+  background-color: var(--color1);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin-top: 10px;
+  color: var(--color2);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.social-icon {
+  /* Style your social media icons here */
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  color: var(--color1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.filter-icon {
+    display: none;
+  }
+
+
+
+#filter-active {
+  display: none;
+}
+.open-filter-button,
+.close-filter-button {
+  display: none;
+}
+.filter-bar-list {
+  display: flex;
+  flex-direction:column;
+   align-items: center;
+  
+  width: 100% !important;
+ 
+}
+.inputs {
+  width: 100% !important;
+}
+.filtration {
+  width: 100% !important;
+}
+.filtration-container {
+  display: flex;
+  flex-direction: column;
+    justify-content: start;
+  align-items: center;
+  font-size: 17px;
+  padding: 10px 20px;
+  padding-right: 40px;
+  /* gap:50px */
+}
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  /* height: 100%; */
+  /* width: 100%; */
+}
+
+@media (max-width: 600px) {
+    .filtration-container{
+        justify-content:start !important;
+        align-items: start !important;
+    }
+    .right-side .cover-picture{
+      height: 20vh;
+    }
+  .about-artist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+  .head {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .follow_btn button {
+    margin-top: 8px;
+    font-size: 10px;
+  }
+  .artist-info .info span h2 {
+    font-size: 18px;
+  }
+  .artist-info .info span p {
+    font-size: 15px;
+  }
+  .inputs {
+    padding: 0 65px 0 0px;
+    display: flex;
+  }
+
+  .range {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+
+  .range form label span {
+    font-size: 10px; /* Decrease font size for smaller screens */
+  }
+
+  .range form input[type="checkbox"] {
+    margin-right: 5px; /* Reduce margin between checkbox and text */
+  }
+  .body-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .products {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Show 2 cards in a row instead of 3 */
+  }
+  .products {
+    width: 100%;
+    padding: 15px;
+  }
+  .product {
+    width: 100%; /* Adjust width to fit smaller screens */
+    height: auto; /* Adjust height proportionally */
+    margin-right: 0; /* Remove margin-right */
+  }
+
+  .product-img {
+    height: 170px; /* Adjust height for smaller screens */
+  }
+
+  .image-thumb {
+    height: 170px; /* Adjust height for smaller screens */
+  }
+
+    .add-card-btn {
+    top: 130px; /* Adjust button position for smaller images */
+  }
+  .product-name h3 {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+
+  .product-info {
+    height: auto; /* Allow height to adjust automatically */
+    padding: 20px 4px 4px 4px; /* Adjust padding for smaller screens */
+  }
+
+  .price p {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .price span {
+    font-size: 16px; /* Adjust strike-through price font size */
+  }
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 80%;
+    margin-top: 20%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+    overflow: scroll;
+  }
+  .filter-container a {
+    margin: 20px 20px;
+    line-height: 1.3;
+    font-size: 22px;
+  }
+  .range p {
+    font-size: 18px;
+  }
+  .range {
+    width: 50vw;
+    margin-top: 0px;
+    margin-bottom: 120px;
+  }
+  .filter-content {
+    display: flex;
+    flex-direction: row;
+  }
+  .filtration {
+    width: 80% !important;
+    overflow: scroll !important;
+  }
+  .inputs {
+    box-sizing: border-box;
+    padding: 0px;
+    flex-direction: column !important;
+    overflow: scroll !important;
+  }
+  .open-filter-button,
+  .close-filter-button {
+    padding: 5px;
+    display: block;
+  }
+  .inputs form {
+    margin: 0px !important;
+  }
+  #filter-active:checked ~ .filter-container {
+    right: 0;
+  }
+  #filter-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .filter-bar-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-top: 4px solid #215077;
+    margin-top: 10px;
+    padding-top: 20px;
+    overflow: scroll !important;
+  }
+  .filter-bar-list-hover a {
+    color: #215077;
+    font-size: 24px;
+    margin: 10px 20px;
+  }
+  .profile-info h2 {
+    font-size: 14px !important;
+  }
+  .filter-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #215077;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+      .filtration-container{
+        justify-content:start !important;
+        align-items: start !important;
+    }
+  .filter-icon {
+    display: none;
+  }
+  .products {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Show 2 cards in a row instead of 3 */
+  }
+
+  .right-side {
+    width: 90% !important;
+  }
+  .right-side .cover-picture {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* This will vertically center the content */
+    width: 100%;
+    position: relative; /* Needed for absolute positioning of the logo */
+    margin-bottom: 0px;
+    box-sizing: border-box;
+  }
+  .right-side {
+    margin-bottom: 0px;
+  }
+
+  .right-side .cover-picture img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+  }
+
+  .cover-picture img {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+
+  .right-side .cover-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    box-sizing: border-box;
+  }
+  .product {
+    width: 90%; /* Adjust width to fit smaller screens */
+    height: auto; /* Adjust height proportionally */
+    margin-right: 0; /* Remove margin-right */
+  }
+
+  .product-img {
+    height: 170px; /* Adjust height for smaller screens */
+  }
+
+  .image-thumb {
+    height: 170px; /* Adjust height for smaller screens */
+  }
+
+  .add-card-btn {
+    top: 150px; /* Adjust button position for smaller images */
+  }
+
+  .product-info {
+    height: auto; /* Allow height to adjust automatically */
+    padding: 20px 4px 4px 4px; /* Adjust padding for smaller screens */
+  }
+
+  .price p {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .price span {
+    font-size: 16px; /* Adjust strike-through price font size */
+  }
+}
